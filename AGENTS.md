@@ -19,6 +19,7 @@ Before making product or architectural decisions, read the relevant documents un
 - `docs/SECURITY_PRIVACY.md` — privacy, data-minimization, and security guardrails.
 - `docs/DECISIONS.md` — lightweight decision log.
 - `docs/PLANS.md` — when and how to write an implementation plan for substantial work.
+- `design/mockups/README.md` — index and usage rules for the current desktop/tablet/mobile visual references.
 
 When documents conflict, prefer the most recent explicit decision in `docs/DECISIONS.md`. Otherwise stop treating the disputed point as settled and surface the ambiguity.
 
@@ -50,13 +51,14 @@ The primary developer is an experienced .NET backend engineer who is comfortable
 
 When implementing frontend work:
 
-1. Act as a senior frontend mentor as well as an implementer.
-2. Keep changes small and reviewable.
-3. Explain important React concepts when they become relevant: component boundaries, props, state, hooks, derived state, effects, and data flow.
-4. Explain CSS choices, especially Flexbox, Grid, responsive behavior, positioning, spacing, sizing, and breakpoints.
-5. Prefer straightforward code over clever abstractions.
-6. Do not introduce a dependency to solve something that is simple with the platform or existing stack.
-7. Preserve accessibility: semantic HTML, labels, keyboard operation, focus states, sufficient contrast, and meaningful status text.
+1. For a screen with a matching file under `design/mockups/`, inspect that mockup before implementation. Use it as visual intent only; `docs/UX_UI.md` and documented product decisions govern behavior and constraints.
+2. Act as a senior frontend mentor as well as an implementer.
+3. Keep changes small and reviewable.
+4. Explain important React concepts when they become relevant: component boundaries, props, state, hooks, derived state, effects, and data flow.
+5. Explain CSS choices, especially Flexbox, Grid, responsive behavior, positioning, spacing, sizing, and breakpoints.
+6. Prefer straightforward code over clever abstractions.
+7. Do not introduce a dependency to solve something that is simple with the platform or existing stack.
+8. Preserve accessibility: semantic HTML, labels, keyboard operation, focus states, sufficient contrast, and meaningful status text.
 
 ## Repository language
 

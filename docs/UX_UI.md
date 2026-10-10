@@ -731,7 +731,31 @@ Do not infer these from generic SaaS conventions.
 
 ## 24. Design references
 
-Existing or future mockups should be treated as visual references only when they are explicitly added to the repository.
+The repository includes visual references under `design/mockups/`. Read `design/mockups/README.md` before implementing a screen from those files.
+
+Current references:
+
+### Desktop
+
+- `design/mockups/desktop-appointment-dashboard.png`
+- `design/mockups/desktop-representative-directory.png`
+- `design/mockups/desktop-book-appointment-sofia-bennett.png`
+
+### Tablet
+
+- `design/mockups/tablet-scheduling-dashboard.png`
+- `design/mockups/tablet-representative-directory.png`
+- `design/mockups/tablet-appointment-booking.png`
+
+### Mobile
+
+- `design/mockups/mobile-visit-dashboard.png`
+- `design/mockups/mobile-find-representatives.png`
+- `design/mockups/mobile-appointment-booking.png`
+
+For UI work, inspect the relevant image in addition to this document. Use the mockup to understand composition, hierarchy, density, navigation treatment, responsive intent, and component appearance.
+
+Mockups are **visual references, not product specifications**. Generated names, companies, dates, counts, text, statuses, form fields, and workflow details may be illustrative placeholders. Do not promote them into domain requirements unless another product document confirms them.
 
 When a mockup conflicts with a documented product requirement:
 
@@ -740,7 +764,7 @@ When a mockup conflicts with a documented product requirement:
 3. prefer the most recently approved source when approval is clear;
 4. otherwise surface the discrepancy for a product/design decision.
 
-When implementing from a mockup, preserve the intent rather than reproducing brittle pixel values that break responsive behavior.
+When implementing from a mockup, preserve visual intent rather than reproducing brittle pixel values. Derive responsive layouts with CSS Grid/Flexbox and the breakpoints in this document; do not hard-code the source image dimensions as application breakpoints.
 
 ---
 
