@@ -1,0 +1,6 @@
+#root {
+    display: grid;
+    /* Let the main column shrink to fit; wide content may still need its own scrolling. */
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+    height: 100%;
+}
