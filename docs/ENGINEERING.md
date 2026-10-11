@@ -83,6 +83,24 @@ Before implementing appointments, explicitly decide:
 
 Do not make these rules implicit across frontend and backend.
 
+## Commit messages
+
+Use English commit messages with a short prefix describing the kind of change:
+
+```text
+type: short description
+```
+
+| Prefix | Meaning | Example |
+| --- | --- | --- |
+| `feat` | A new feature or capability. | `feat: add initial sidebar and main content grid layout` |
+| `assets` | Images, logos, fonts, or similar asset files. | `assets: add PharmaRep SVG logo variants` |
+| `docs` | Documentation changes. | `docs: record step-by-step collaboration preference` |
+
+These prefixes make Git history easier to scan; Git itself gives them no special behavior. `feat` and `docs` are commonly used in Conventional Commits. `assets` is a descriptive repository convention; this guide does not require tooling or strict enforcement of a broader standard.
+
+Keep descriptions concise and use an action verb such as `add`, `update`, or `fix`. Choose the prefix that best describes the main purpose of the commit.
+
 ## Pull-request / change summary expectation
 
 For meaningful changes, summarize:
