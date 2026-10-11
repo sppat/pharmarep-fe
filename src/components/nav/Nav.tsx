@@ -1,4 +1,5 @@
 import Logo from '../../assets/images/pharmarep-mark.svg';
+import NavList from './NavList/NavList';
 import './Nav.css';
 
 function Nav() {
@@ -8,7 +9,9 @@ function Nav() {
         <img src={Logo} alt="" />
         <span className="brand-name">PharmaRep</span>
       </div>
-      <nav>Navigation</nav>
+      <nav>
+        <NavList />
+      </nav>
     </aside>
   );
 }

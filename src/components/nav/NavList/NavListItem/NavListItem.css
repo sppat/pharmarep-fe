@@ -1,0 +1,23 @@
+.nav-list-item {
+  display: grid;
+  /* Match the brand row: a reserved icon column and a flexible, shrinkable text column. */
+  grid-template-columns: var(--sidebar-icon-column-width) minmax(0, 1fr);
+  align-items: center;
+  /* Inherit the same icon-to-text spacing used by the brand row. */
+  gap: var(--sidebar-row-gap);
+
+  img {
+    width: 1.5rem;
+    /* Keep the icon within its column if that column is made narrower later. */
+    max-width: 100%;
+    /* Preserve the SVG's proportions when its displayed width changes. */
+    height: auto;
+    /* Center smaller navigation icons within the same column as the logo. */
+    justify-self: center;
+  }
+
+  span {
+    /* Wrap at spaces normally; break a long word if needed to prevent overflow. */
+    overflow-wrap: anywhere;
+  }
+}

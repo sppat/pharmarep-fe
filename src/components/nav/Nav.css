@@ -1,25 +1,43 @@
 .sidebar {
-    display: flex;
-    flex-direction: column;
+  /*
+   * Descendants inherit these values, keeping the brand and navigation aligned.
+   * Change the inset, icon column, or icon-to-text gap here to update both rows.
+   */
+  --sidebar-inline-padding: var(--space-4);
+  --sidebar-icon-column-width: 2rem;
+  --sidebar-row-gap: var(--space-4);
+
+  display: flex;
+  flex-direction: column;
+
+  nav {
+    /* First value: top/bottom padding. Second: the shared left/right inset. */
+    padding: var(--space-4) var(--sidebar-inline-padding);
+    width: 100%;
+    flex: 1;
+  }
 }
 
 .logo-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-4);
+  display: grid;
+  /* Reserve an icon column; let the text fill the remaining width and shrink. */
+  grid-template-columns: var(--sidebar-icon-column-width) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--sidebar-row-gap);
+  width: 100%;
+  /* Match the navigation's inset so both grids start at the same position. */
+  padding: var(--space-4) var(--sidebar-inline-padding);
+
+  img {
+    /* Fill the reserved icon column and calculate height from the SVG's proportions. */
     width: 100%;
-    padding: var(--space-4);
+    height: auto;
+  }
 
-    img {
-        width: 2rem;
-        height: auto;
-        flex-shrink: 0;
-    }
-
-    .brand-name {
-        font-size: var(--font-size-2xl);
-        font-weight: 700;
-    }
+  .brand-name {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    /* Allow breaks within a long word only when needed to fit the text column. */
+    overflow-wrap: anywhere;
+  }
 }

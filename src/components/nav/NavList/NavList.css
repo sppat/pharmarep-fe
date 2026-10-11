@@ -1,0 +1,8 @@
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  /* Default align-items: stretch gives every row the same available width. */
+  justify-content: center;
+  gap: var(--space-8);
+  /* The parent nav supplies the inset; extra list padding would shift the columns. */
+}
