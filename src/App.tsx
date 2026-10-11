@@ -1,8 +1,9 @@
 import './App.css';
+import Nav from './components/nav/Nav';
 
 function App() {
   return <>
-    <aside>Navigation</aside>
+    <Nav />
     <main>Content</main>
   </>;
 }
