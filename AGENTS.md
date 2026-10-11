@@ -70,6 +70,15 @@ When implementing frontend work:
 
 ## Working rules
 
+### Step-by-step collaboration
+
+- Work incrementally on the founder's current requested step. Keep each change small, understandable, and reviewable.
+- Resolve product, design, and technical questions together as they become relevant to that step. Do not require all discovery questions or documentation gaps to be resolved upfront.
+- Continue work that is clear and authorized. When an unresolved question materially affects the current step, explain the concrete choice and ask for the founder's input.
+- Keep unrelated findings as follow-up items rather than expanding the current task to address them.
+- Record durable decisions in `docs/DECISIONS.md` and update the relevant document when needed, so agreed choices carry into future sessions.
+- Treat this as the standing collaboration preference; the founder does not need to repeat it for each task.
+
 Before changing code:
 
 1. Inspect the existing repository structure and nearby code.
