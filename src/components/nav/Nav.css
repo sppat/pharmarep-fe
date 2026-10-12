@@ -16,28 +16,28 @@
     width: 100%;
     flex: 1;
   }
-}
 
-.logo-container {
-  display: grid;
-  /* Reserve an icon column; let the text fill the remaining width and shrink. */
-  grid-template-columns: var(--sidebar-icon-column-width) minmax(0, 1fr);
-  align-items: center;
-  gap: var(--sidebar-row-gap);
-  width: 100%;
-  /* Match the navigation's inset so both grids start at the same position. */
-  padding: var(--space-4) var(--sidebar-inline-padding);
-
-  img {
-    /* Fill the reserved icon column and calculate height from the SVG's proportions. */
+  .logo-container {
+    display: grid;
+    /* Reserve an icon column; let the text fill the remaining width and shrink. */
+    grid-template-columns: var(--sidebar-icon-column-width) minmax(0, 1fr);
+    align-items: center;
+    gap: var(--sidebar-row-gap);
     width: 100%;
-    height: auto;
-  }
+    /* Match the navigation's inset so both grids start at the same position. */
+    padding: var(--space-4) var(--sidebar-inline-padding);
 
-  .brand-name {
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    /* Allow breaks within a long word only when needed to fit the text column. */
-    overflow-wrap: anywhere;
+    img {
+      /* Fill the reserved icon column and calculate height from the SVG's proportions. */
+      width: 100%;
+      height: auto;
+    }
+
+    .brand-name {
+      font-size: var(--font-size-2xl);
+      font-weight: 700;
+      /* Allow breaks within a long word only when needed to fit the text column. */
+      overflow-wrap: anywhere;
+    }
   }
 }
