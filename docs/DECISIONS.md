@@ -83,6 +83,50 @@ Patient data is unnecessary for testing the scheduling hypothesis and would mate
 
 ---
 
+## D-005 — Match the prototype sidebar background to the desktop mockup
+
+**Date:** 2026-10-18
+
+**Status:** Superseded by D-006
+
+### Decision
+
+Use the charcoal sidebar background sampled from `design/mockups/desktop-appointment-dashboard.png` for the current prototype. The token value and sampling reference are documented in `docs/UX_UI.md`.
+
+### Rationale
+
+The founder requested that the sidebar background match the visual reference.
+
+### Consequences
+
+Apply the color through `--color-bg-sidebar`. This sets the prototype's sidebar surface; it does not approve changes to the remaining palette or require reproducing image texture.
+
+---
+
+## D-006 — Align the full prototype color palette with the desktop mockup
+
+**Date:** 2026-10-18
+
+**Status:** Accepted
+
+### Decision
+
+Use the desktop appointment dashboard mockup as the visual reference for all current color tokens. `docs/UX_UI.md` owns the values and distinguishes sampled or approximate visible colors from inferred interaction states.
+
+### Rationale
+
+The founder clarified that the full color palette should follow the mockup, extending the earlier sidebar-only change.
+
+### Consequences
+
+Use charcoal surfaces and turquoise primary actions consistently. Derive states absent from the screenshot from the same palette, and validate them when their components are implemented. Existing sidebar state variables reuse these tokens. This decision concerns color values; routing and interaction behavior remain separate work.
+
+### Supersedes
+
+D-005.
+
+---
+
 ## Template for new decisions
 
 ```markdown

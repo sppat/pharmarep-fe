@@ -56,41 +56,56 @@ Use CSS custom properties as the primary token mechanism for the initial impleme
 
 ### 3.1 Color palette
 
+The current palette follows `design/mockups/desktop-appointment-dashboard.png` (D-006). These are representative solid colors; the raster reference includes gradients, texture, and antialiased text rather than a uniform color for every role.
+
 ```css
 :root {
   /* Application surfaces */
-  --color-bg-app: #0b1120;
-  --color-bg-sidebar: #0f172a;
-  --color-bg-surface: #111827;
-  --color-bg-surface-hover: #172033;
-  --color-bg-elevated: #1e293b;
+  --color-bg-app: #0f161d;
+  --color-bg-sidebar: #0d1117;
+  --color-bg-surface: #16202b;
+  --color-bg-surface-hover: #1d2b38;
+  --color-bg-elevated: #1c2936;
 
   /* Borders */
-  --color-border: #263244;
-  --color-border-subtle: #1e293b;
+  --color-border: #2b3c4f;
+  --color-border-subtle: #22303e;
 
   /* Text */
-  --color-text-primary: #f8fafc;
-  --color-text-secondary: #cbd5e1;
-  --color-text-muted: #94a3b8;
-  --color-text-disabled: #64748b;
+  --color-text-primary: #f1f2f6;
+  --color-text-secondary: #a8bcd9;
+  --color-text-muted: #94aac9;
+  --color-text-disabled: #63758b;
 
   /* Primary interaction */
-  --color-primary: #38bdf8;
-  --color-primary-hover: #0ea5e9;
-  --color-primary-soft: #0c4a6e;
-  --color-on-primary: #0b1120;
+  --color-primary: #4edfcd;
+  --color-primary-hover: #59e6d2;
+  --color-primary-soft: #10242b;
+  --color-on-primary: #010d0a;
 
   /* Semantic */
-  --color-success: #22c55e;
-  --color-warning: #f59e0b;
-  --color-danger: #ef4444;
-  --color-info: #60a5fa;
+  --color-success: #52d2c3;
+  --color-warning: #ecc44d;
+  --color-danger: #ed504e;
+  --color-info: #82b5ed;
 
   /* Focus */
-  --color-focus-ring: #7dd3fc;
+  --color-focus-ring: #8aeee1;
 }
 ```
+
+### Palette reference and inferred states
+
+| Tokens | Reference / selection method |
+| --- | --- |
+| App, sidebar, and card surface backgrounds | Sampled at `(800, 200)`, `(150, 500)`, and `(1000, 370)` respectively. |
+| Primary fill, primary foreground, and soft primary background | Representative button fill and dark label pixels; selected navigation background sampled at `(200, 125)`. |
+| Primary, secondary, and muted text | Representative foreground pixels from the page title, subtitle, and appointment metadata. |
+| Success, warning, and danger | Representative confirmed/pending badge text and the red notification indicator. |
+| Border and subtle border | Approximate shades based on panel outlines and internal separators. |
+| Surface hover, elevated surface, disabled text, primary hover, informational state, and focus ring | Inferred companion shades; these states are not demonstrated by the screenshot. Verify them in the rendered UI as their components are implemented. |
+
+Neutral black shadow colors remain unchanged. Use `--color-on-primary` on both default and hovered primary fills. Sidebar active and hover color variables alias the shared palette in `.sidebar`: primary-soft/primary for active rows and surface-hover/primary-text for hover rows.
 
 ### Color usage rules
 
@@ -103,6 +118,24 @@ Use CSS custom properties as the primary token mechanism for the initial impleme
 - Do not communicate status with color alone. Pair status color with text and, when useful, an icon.
 - Avoid pure black and pure white for large surfaces when an existing token is available.
 - Do not introduce new hexadecimal colors inside feature CSS unless the value is truly local and cannot reasonably map to a semantic token.
+
+### Application shell backgrounds
+
+The current implementation applies the application background to `body` and a separate sidebar background to `.sidebar`:
+
+```css
+body {
+  background-color: var(--color-bg-app);
+}
+
+.sidebar {
+  background-color: var(--color-bg-sidebar);
+}
+```
+
+Defining a color token does not apply it automatically. The sidebar needs its own background declaration; otherwise its transparent background shows the application background beneath it.
+
+The sidebar and application use the mockup-inspired palette above. Update the shared tokens when refining colors so the shell and future components stay consistent. See D-006 in `docs/DECISIONS.md`.
 
 ### Accessible foreground pairing
 

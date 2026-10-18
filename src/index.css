@@ -1,33 +1,34 @@
 :root {
+  /* Mockup-inspired palette; states absent from the image are derived (see docs/UX_UI.md). */
   /* Application surfaces */
-  --color-bg-app: #0b1120;
-  --color-bg-sidebar: #0f172a;
-  --color-bg-surface: #111827;
-  --color-bg-surface-hover: #172033;
-  --color-bg-elevated: #1e293b;
+  --color-bg-app: #0f161d;
+  --color-bg-sidebar: #0d1117;
+  --color-bg-surface: #16202b;
+  --color-bg-surface-hover: #1d2b38;
+  --color-bg-elevated: #1c2936;
 
   /* Borders */
-  --color-border: #263244;
-  --color-border-subtle: #1e293b;
+  --color-border: #2b3c4f;
+  --color-border-subtle: #22303e;
 
   /* Text */
-  --color-text-primary: #f8fafc;
-  --color-text-secondary: #cbd5e1;
-  --color-text-muted: #94a3b8;
-  --color-text-disabled: #64748b;
+  --color-text-primary: #f1f2f6;
+  --color-text-secondary: #a8bcd9;
+  --color-text-muted: #94aac9;
+  --color-text-disabled: #63758b;
 
   /* Primary interaction */
-  --color-primary: #38bdf8;
-  --color-primary-hover: #0ea5e9;
-  --color-primary-soft: #0c4a6e;
-  --color-on-primary: #0b1120;
+  --color-primary: #4edfcd;
+  --color-primary-hover: #59e6d2;
+  --color-primary-soft: #10242b;
+  --color-on-primary: #010d0a;
 
   /* Semantic colors and focus */
-  --color-success: #22c55e;
-  --color-warning: #f59e0b;
-  --color-danger: #ef4444;
-  --color-info: #60a5fa;
-  --color-focus-ring: #7dd3fc;
+  --color-success: #52d2c3;
+  --color-warning: #ecc44d;
+  --color-danger: #ed504e;
+  --color-info: #82b5ed;
+  --color-focus-ring: #8aeee1;
 
   /* Typography */
   --font-sans:
