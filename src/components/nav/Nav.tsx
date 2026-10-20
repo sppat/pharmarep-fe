@@ -1,17 +1,16 @@
-import Logo from '../../assets/images/pharmarep-mark.svg';
 import NavList from './NavList/NavList';
+import NavFooter from './NavFooter/NavFooter';
+import NavHeader from './NavHeader/NavHeader';
 import './Nav.css';
 
 function Nav() {
   return (
     <aside className="sidebar">
-      <div className="logo-container">
-        <img src={Logo} alt="" />
-        <span className="brand-name">PharmaRep</span>
-      </div>
+      <NavHeader />
       <nav>
         <NavList />
       </nav>
+      <NavFooter />
     </aside>
   );
 }
