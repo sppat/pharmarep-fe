@@ -13,7 +13,7 @@ function NavFooter() {
         <img src={ProfileIcon} alt="" />
         <div className="profile-info">
           <span className="profile-name">John Doe</span>
-          <span className="profile-role">Sales Representative</span>
+          <span className="profile-role">Medical Representative</span>
         </div>
         <ChevronRightIcon />
       </NavLink>
