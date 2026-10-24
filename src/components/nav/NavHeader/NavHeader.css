@@ -1,22 +1,22 @@
 .nav-header {
-    display: grid;
-    /* Reserve an icon column; let the text fill the remaining width and shrink. */
-    grid-template-columns: var(--sidebar-icon-column-width) minmax(0, 1fr);
-    align-items: center;
-    gap: var(--sidebar-row-gap);
+  display: grid;
+  /* Reserve an icon column; let the text fill the remaining width and shrink. */
+  grid-template-columns: var(--sidebar-icon-column-width) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--sidebar-row-gap);
+  width: 100%;
+  /* Match the navigation links' horizontal inset. */
+  padding: var(--space-4) var(--sidebar-inline-padding);
+
+  img {
+    /* Scale to the icon column's width while preserving the SVG's proportions. */
     width: 100%;
-    /* Match the navigation links' horizontal inset. */
-    padding: var(--space-4) var(--sidebar-inline-padding);
-
-    img {
-      /* Scale to the icon column's width while preserving the SVG's proportions. */
-      width: 100%;
-      height: auto;
-    }
-
-    .brand-name {
-      font-size: var(--font-size-2xl);
-      font-weight: 700;
-      overflow-wrap: anywhere;
-    }
+    height: auto;
   }
+
+  .brand-name {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+}
