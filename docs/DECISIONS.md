@@ -127,6 +127,26 @@ D-005.
 
 ---
 
+## D-007 — Scroll desktop main content independently of the sidebar
+
+**Date:** 2026-10-24
+
+**Status:** Accepted
+
+### Decision
+
+Keep the desktop sidebar visible while the main page content scrolls within the viewport-height application shell. Implementation guidance lives in `docs/UX_UI.md`.
+
+### Rationale
+
+The founder selected independent main-content scrolling so navigation remains available while reading longer pages.
+
+### Consequences
+
+Constrain the shell's grid row and give the main region its own vertical scrolling. Handling sidebar contents that exceed a short viewport remains a follow-up. Responsive navigation on smaller screens remains open.
+
+---
+
 ## Template for new decisions
 
 ```markdown

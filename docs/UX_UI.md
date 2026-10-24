@@ -284,6 +284,10 @@ Current preference:
 
 Use CSS Grid or Flexbox for the application shell. Avoid absolute positioning for primary layout.
 
+Desktop scrolling follows D-007: the main content scrolls independently while the sidebar remains visible. The current shell uses `height: 100dvh` and one `minmax(0, 1fr)` grid row on `#root`, with `overflow-y: auto` on `main`. The body does not set a separate viewport height.
+
+Short-window sidebar overflow remains a follow-up: if the sidebar's own contents exceed the available height, navigation and the profile must remain reachable. This desktop scrolling choice does not settle the compact navigation pattern for smaller screens.
+
 ### Tablet
 
 - navigation may collapse or become temporarily expandable;
