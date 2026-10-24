@@ -1,5 +1,16 @@
 .profile-container {
-    padding-inline: var(--space-1);
+    padding: var(--space-1);
+    position: relative;
+
+    &::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    top: 0;
+    right: var(--sidebar-inline-padding);
+    left: var(--sidebar-inline-padding);
+    background-color: var(--color-border-subtle);
+  }
 }
 
 .profile-container > a {
@@ -9,19 +20,8 @@
   gap: var(--space-4);
   padding: var(--space-4) var(--space-3);
   border-radius: var(--radius-md);
-  position: relative;
   text-decoration: none;
   color: inherit;
-
-  &::before {
-    content: '';
-    position: absolute;
-    height: 1px;
-    top: 0;
-    right: var(--space-3);
-    left: var(--space-3);
-    background-color: var(--color-border-subtle);
-  }
 
   &:hover {
     background-color: var(--sidebar-hover-row-background-color);
