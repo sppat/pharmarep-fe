@@ -147,6 +147,26 @@ Constrain the shell's grid row and give the main region its own vertical scrolli
 
 ---
 
+## D-008 — Collapse the sidebar to an icon rail on smaller screens
+
+**Date:** 2026-10-25
+
+**Status:** Accepted
+
+### Decision
+
+Below 1024px, use a 72px left sidebar showing the logo mark, navigation icons, and profile avatar. At 1024px and above, retain the expanded 248px sidebar. These are initial prototype dimensions; implementation guidance lives in `docs/UX_UI.md`.
+
+### Rationale
+
+The founder chose a compact sidebar to preserve space for main content while keeping navigation visible.
+
+### Consequences
+
+Hide text and the profile chevron in compact mode, preserve accessible names on navigation/profile links, and keep the logo at 2rem wide. This choice takes precedence over the mobile mockups' bottom navigation. The founder explicitly deferred preserving the compact header's brand name for screen readers. Short-window sidebar overflow remains a separate follow-up.
+
+---
+
 ## Template for new decisions
 
 ```markdown

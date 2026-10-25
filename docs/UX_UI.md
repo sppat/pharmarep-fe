@@ -286,11 +286,17 @@ Use CSS Grid or Flexbox for the application shell. Avoid absolute positioning fo
 
 Desktop scrolling follows D-007: the main content scrolls independently while the sidebar remains visible. The current shell uses `height: 100dvh` and one `minmax(0, 1fr)` grid row on `#root`, with `overflow-y: auto` on `main`. The body does not set a separate viewport height.
 
-Short-window sidebar overflow remains a follow-up: if the sidebar's own contents exceed the available height, navigation and the profile must remain reachable. This desktop scrolling choice does not settle the compact navigation pattern for smaller screens.
+Short-window sidebar overflow remains a follow-up: if the sidebar's own contents exceed the available height, navigation and the profile must remain reachable.
+
+### Current compact sidebar
+
+Following D-008, the sidebar remains a left rail below 1024px and changes from 248px to 72px wide. It shows the logo mark, navigation icons, and profile avatar. Brand text, navigation labels, profile details, and the profile chevron are hidden. The logo stays 2rem wide, and navigation/profile links retain accessible names through `aria-label`.
+
+These widths and the breakpoint are prototype defaults. The rail is the current choice for both tablet and mobile, rather than the bottom navigation shown in the mobile mockups. Preserving the brand name for screen readers when its text is hidden is explicitly deferred; navigation and profile link labels remain available.
 
 ### Tablet
 
-- navigation may collapse or become temporarily expandable;
+- use the compact sidebar below 1024px as described above;
 - do not preserve desktop widths mechanically;
 - allow content columns to collapse before controls become cramped;
 - keep scheduling actions reachable without horizontal page scrolling.
@@ -298,7 +304,7 @@ Short-window sidebar overflow remains a follow-up: if the sidebar's own contents
 ### Mobile
 
 - do not keep the desktop sidebar permanently expanded;
-- prefer a compact navigation pattern based on the eventual information architecture;
+- use the current compact sidebar, revisiting the pattern if the information architecture changes;
 - stack form fields when horizontal grouping becomes cramped;
 - convert wide data presentations into cards/grouped rows where that improves usability;
 - allow intentional horizontal scrolling only for content that genuinely benefits from tabular comparison;

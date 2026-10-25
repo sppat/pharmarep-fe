@@ -9,6 +9,7 @@ function NavFooter() {
       <NavLink
         className={({ isActive }) => (isActive ? 'active' : '')}
         to="/profile"
+        aria-label="My profile"
       >
         <img src={ProfileIcon} alt="" />
         <div className="profile-info">

@@ -20,3 +20,18 @@
     overflow-wrap: anywhere;
   }
 }
+
+@media (width < 1024px) {
+  .nav-header {
+    grid-template-columns: minmax(0, 1fr);
+
+    img {
+      width: 2rem;
+      justify-self: center;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}

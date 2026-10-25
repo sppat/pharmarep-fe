@@ -72,3 +72,15 @@
     flex-shrink: 0;
   }
 }
+
+@media (width < 1024px) {
+  .profile-container > a .profile-info,
+  .profile-container svg {
+    display: none;
+  }
+
+  .profile-container > a {
+    padding: var(--space-2);
+    justify-content: center;
+  }
+}

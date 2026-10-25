@@ -8,6 +8,7 @@ function NavListItem({ icon, label, destination }: NavListItemProps) {
       <NavLink
         className={({ isActive }) => (isActive ? 'active' : '')}
         to={destination}
+        aria-label={label}
       >
         {icon}
         <span>{label}</span>

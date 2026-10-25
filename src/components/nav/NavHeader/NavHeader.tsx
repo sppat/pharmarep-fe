@@ -5,7 +5,9 @@ function NavHeader() {
   return (
     <div className="nav-header">
       <img src={Logo} alt="" />
-      <span className="brand-name">PharmaRep</span>
+      <span className="brand-name">
+        PharmaRep
+      </span>
     </div>
   );
 }
