@@ -4,7 +4,7 @@ These images are visual references for the current PharmaRep prototype. They are
 
 ## Desktop
 
-- `desktop-appointment-dashboard.png` — appointment/dashboard shell reference.
+- `PharmaRep Healthcare Dashboard.png` — current doctor and midwife dashboard reference; replaces `desktop-appointment-dashboard.png`.
 - `desktop-representative-directory.png` — representative discovery/directory reference.
 - `desktop-book-appointment-sofia-bennett.png` — appointment booking flow reference.
 

@@ -56,7 +56,7 @@ Use CSS custom properties as the primary token mechanism for the initial impleme
 
 ### 3.1 Color palette
 
-The current palette follows `design/mockups/desktop-appointment-dashboard.png` (D-006). These are representative solid colors; the raster reference includes gradients, texture, and antialiased text rather than a uniform color for every role.
+The current palette follows the original `design/mockups/desktop-appointment-dashboard.png` (D-006), retained in Git history. The current dashboard reference is `design/mockups/PharmaRep Healthcare Dashboard.png`; replacing the reference does not change the existing color tokens. These are representative solid colors; the original raster reference includes gradients, texture, and antialiased text rather than a uniform color for every role.
 
 ```css
 :root {
@@ -780,7 +780,7 @@ Current references:
 
 ### Desktop
 
-- `design/mockups/desktop-appointment-dashboard.png`
+- `design/mockups/PharmaRep Healthcare Dashboard.png`
 - `design/mockups/desktop-representative-directory.png`
 - `design/mockups/desktop-book-appointment-sofia-bennett.png`
 
