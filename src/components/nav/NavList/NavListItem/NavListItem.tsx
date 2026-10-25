@@ -5,11 +5,7 @@ import './NavListItem.css';
 function NavListItem({ icon, label, destination }: NavListItemProps) {
   return (
     <li className="nav-list-item">
-      <NavLink
-        className={({ isActive }) => (isActive ? 'active' : '')}
-        to={destination}
-        aria-label={label}
-      >
+      <NavLink to={destination} aria-label={label}>
         {icon}
         <span>{label}</span>
       </NavLink>

@@ -6,11 +6,7 @@ import './NavFooter.css';
 function NavFooter() {
   return (
     <div className="profile-container">
-      <NavLink
-        className={({ isActive }) => (isActive ? 'active' : '')}
-        to="/profile"
-        aria-label="My profile"
-      >
+      <NavLink to="/profile" aria-label="My profile">
         <img src={ProfileIcon} alt="" />
         <div className="profile-info">
           <span className="profile-name">John Doe</span>
