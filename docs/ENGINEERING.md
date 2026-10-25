@@ -34,6 +34,8 @@ Run `npm run lint` to check the repository's TypeScript and TSX files. Keep the 
 
 Keep formatting and naming restrictions out of the lint configuration unless a concrete need is agreed.
 
+For inline lint errors in VS Code, install Microsoft's ESLint extension (`dbaeumer.vscode-eslint`), listed in `.vscode/extensions.json`. The extension uses the repository's ESLint configuration and displays diagnostics as you type. The recommendation does not install the extension automatically.
+
 ## CSS
 
 The project should be educational as well as functional.
