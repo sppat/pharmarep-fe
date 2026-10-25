@@ -23,6 +23,17 @@ These conventions are intentionally lightweight. Follow the repository's establi
 - Avoid premature generic component systems.
 - Keep server data types and UI view models explicit when they differ.
 
+## ESLint
+
+Run `npm run lint` to check the repository's TypeScript and TSX files. Keep the recommended JavaScript, React Hooks, and Vite Fast Refresh presets, and use TypeScript's `recommendedTypeChecked` preset with `projectService` to resolve each file's TypeScript project.
+
+- Require `===` and `!==` through `eqeqeq: ['error', 'always']`.
+- Treat `react-hooks/exhaustive-deps` violations as errors; resolve missing dependencies by understanding the effect's behavior.
+- The type-aware preset includes `@typescript-eslint/no-floating-promises` and `@typescript-eslint/no-misused-promises`, alongside its other recommended checks. Handle asynchronous work explicitly.
+- Accessibility linting is deferred: the published `eslint-plugin-jsx-a11y` 6.10.2 declares support only through ESLint 9, while this repository uses ESLint 10. Recheck compatibility before adding it. Manual accessibility review remains necessary.
+
+Keep formatting and naming restrictions out of the lint configuration unless a concrete need is agreed.
+
 ## CSS
 
 The project should be educational as well as functional.
