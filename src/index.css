@@ -69,6 +69,10 @@
   --content-max-width: 1440px;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 *,
 *::before,
 *::after {

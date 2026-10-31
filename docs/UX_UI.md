@@ -286,6 +286,8 @@ Use CSS Grid or Flexbox for the application shell. Avoid absolute positioning fo
 
 Desktop scrolling follows D-007: the main content scrolls independently while the sidebar remains visible. The current shell uses `height: 100dvh` and one `minmax(0, 1fr)` grid row on `#root`, with `overflow-y: auto` on `main`. The body does not set a separate viewport height.
 
+The shared main header sits before the routed page content inside `main`. It uses `position: sticky` with `top: 0` and an opaque application background to keep the breadcrumb and labelled notification button visible during scrolling. The notification button is currently a UI placeholder; the breadcrumb handles the root and simple paths, with nested-path labels left for later.
+
 Short-window sidebar overflow remains a follow-up: if the sidebar's own contents exceed the available height, navigation and the profile must remain reachable.
 
 ### Current compact sidebar

@@ -1,6 +1,6 @@
 import OverviewIcon from '../../icons/OverviewIcon';
-import NavListItem from './NavListItem/NavListItem';
 import AppointmentIcon from '../../icons/AppointmentIcon';
+import NavListItem from './NavListItem/NavListItem';
 import './NavList.css';
 
 function NavList() {

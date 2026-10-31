@@ -1,0 +1,31 @@
+.main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: var(--space-4);
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg-app);
+
+    .workspace {
+      flex: 1;
+    }
+
+    .notification-bell-btn {
+      background-color: transparent;
+      border: none;
+      color: inherit;
+      padding: var(--space-2);
+      border-radius: var(--radius-md);
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--color-bg-surface-hover);
+      }
+    }
+
+    svg {
+      width: 1.5rem;
+      height: auto;
+    }
+  }
