@@ -1,14 +1,12 @@
-import { Outlet } from 'react-router';
 import './App.css';
 import Nav from './components/nav/Nav';
+import Main from './components/main/Main';
 
 function App() {
   return (
     <>
       <Nav />
-      <main>
-        <Outlet />
-      </main>
+      <Main />
     </>
   );
 }
