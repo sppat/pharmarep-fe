@@ -1,18 +1,18 @@
+import Plus from '../icons/Plus';
 import './Overview.css';
 
 function Overview() {
-  return <div className="overview-container">
-    <section className="">One</section>
-    <div>two</div>
-    <div>three</div>
-    <div>four</div>
-    <div>five</div>
-    <div>six</div>
-    <div>seven</div>
-    <div>eight</div>
-    <div>nine</div>
-    <div>ten</div>
-  </div>;
+  return (
+    <div className="overview-container">
+      <section className="overview-intro">
+        <h1>Good Morning, John</h1>
+        <button className="book-appointment-btn">
+          <Plus />
+          <span>Book an Appointment</span>
+        </button>
+      </section>
+    </div>
+  );
 }
 
 export default Overview;

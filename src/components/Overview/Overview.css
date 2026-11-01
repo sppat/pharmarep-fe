@@ -1,6 +1,32 @@
 .overview-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    height: 100%;
+  padding: var(--space-4);
+
+  .overview-intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .book-appointment-btn {
+      font: inherit;
+      font-weight: 600;
+      background-color: var(--color-primary);
+      color: var(--color-on-primary);
+      border: none;
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-md);
+      display: flex;
+      gap: var(--space-2);
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--color-primary-hover);
+      }
+
+      svg {
+        width: 1.5rem;
+        height: auto;
+      }
+    }
+  }
 }
